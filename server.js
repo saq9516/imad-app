@@ -4,66 +4,46 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articles = {
-        `article-one `: {
+var articles= {
+    `article-one`:{
    title:"Article-One Saq9516",
    heading:"Article-One",
    date:"August 28 2017",
    content: `
    <p>
         This is my content for my first article.This is my content for my first article.This is my content for my first article.
-        This is my content for my first article.This is my content for my first article.This is my content for my first article.
-        This is my content for my first article.This is my content for my first article.This is my content for my first article.
-        This is my content for my first article.This is my content for my first article.This is my content for my first article.
   </p>
-<p>
+  <p>
         This is my content for my first article.This is my content for my first article.This is my content for my first article.
-        This is my content for my first article.This is my content for my first article.This is my content for my first article.
-        This is my content for my first article.This is my content for my first article.This is my content for my first article.
-        This is my content for my first article.This is my content for my first article.This is my content for my first article.
-</p> `
-},
-         `article-two`:{
-               title:"Article-Two Saq9516",
+  </p> `
+}
+    `article-two`:{
+   title:"Article-Two Saq9516",
    heading:"Article-Two",
-   date:"August 28 2017",
+   date:"August 29 2017",
    content: `
-    <p>
-                This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
-                This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
-                This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
-                This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
-            </p>
-        
             <p>
                 This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
-                This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
-                This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
+            </p>
+            <p>
                 This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
             </p> `
-    
 },
-         `article-three`:{
-               title:"Article-Three Saq9516",
+    `article-three`:{
+   title:"Article-Three Saq9516",
    heading:"Article-Three",
-   date:"August 28 2017",
+   date:"August 29 2017",
    content: `
     <p>
-                 This is my content for my three article.This is my content for my three article.This is my content for my three article.<br>
-                This is my content for my three article.This is my content for my three article.This is my content for my three article<br>
-                This is my content for my three article.This is my content for my three article.This is my content for my three article.<br>
-                This is my content for my three article.This is my content for my three article.This is my content for my three article.<br>
-            </p>
-        
-            <p>
-                This is my content for my three article.This is my content for my three article.This is my content for my three article.<br>
-                This is my content for my three article.This is my content for my three article.This is my content for my three article.<br>
-                This is my content for my three article.This is my content for my three article.This is my content for my three article.<br>
-                This is my content for my three article.This is my content for my three article.This is my content for my three article.<br>
-            </p> `
+     This is my content for my three article.This is my content for my three article.This is my content for my three article.
+    </p>
+    <p>
+    This is my content for my three article.This is my content for my three article.This is my content for my three article
+    </p> `
     
-},
-        };
+}
+};
+
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
