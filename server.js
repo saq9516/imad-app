@@ -4,8 +4,10 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+
+
 var articles= {
-    `article-one`:{
+    'article-one':{
    title:"Article-One Saq9516",
    heading:"Article-One",
    date:"August 28 2017",
@@ -13,34 +15,27 @@ var articles= {
    <p>
         This is my content for my first article.This is my content for my first article.This is my content for my first article.
   </p>
-  <p>
-        This is my content for my first article.This is my content for my first article.This is my content for my first article.
-  </p> `
-}
-    `article-two`:{
+   `
+},
+    'article-two':{
    title:"Article-Two Saq9516",
    heading:"Article-Two",
    date:"August 29 2017",
    content: `
-            <p>
-                This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
-            </p>
-            <p>
-                This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.<br>
-            </p> `
+        <p>
+        This is my content for my secound article.This is my content for my secound article.This is my content for my secound article.
+        </p>
+     `
 },
-    `article-three`:{
+   'article-three':{
    title:"Article-Three Saq9516",
    heading:"Article-Three",
-   date:"August 29 2017",
+   date:"August 30 2017",
    content: `
     <p>
      This is my content for my three article.This is my content for my three article.This is my content for my three article.
     </p>
-    <p>
-    This is my content for my three article.This is my content for my three article.This is my content for my three article
-    </p> `
-    
+    `
 }
 };
 
@@ -83,7 +78,9 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var articleName = req.parans.articleName; //use to extract the coresponding article name
+var articleName = req.parans.articleName;
+//use to extract the coresponding article name
+
 app.get("/:articleName", function(req,res){
    // articleName=aricle-one
    //articles[articleName]={} content object of the article-one
