@@ -26,10 +26,10 @@ var articleOne={
     
 };
 function createTemplate(data){
-    var tiltel=data.title;
+    var title=data.title;
     var heading=data.heading;
     var date=data.date;
-    var content=content.date;
+    var content=data.content;
 
 var htmlTemplate = `
     <html>
