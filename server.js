@@ -78,7 +78,7 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var articleName = req.parans.articleName;
+var articleName = req.params.articleName;
 //use to extract the coresponding article name
 
 app.get("/:articleName", function(req,res){
