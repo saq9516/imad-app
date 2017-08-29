@@ -78,11 +78,12 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var articleName = req.params.articleName;                     //use to extract the coresponding article name
+//                    //use to extract the coresponding article name
 
 app.get("/:articleName", function(req,res){
    // articleName=aricle-one
    //articles[articleName]={} content object of the article-one
+   var articleName = req.params.articleName; 
 res.send(createTemplate(articles[articleName]));
 });
 
