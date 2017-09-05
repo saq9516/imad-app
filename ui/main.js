@@ -4,3 +4,17 @@ console.log('Loaded!');
 
 var element=document.getElementById('main_text');
 element.innerHTML='New value';
+
+//move image
+
+
+var img=document.getElementById('img');
+img.onclick=function()
+{
+    
+    img.style.marginLeft='100px';
+    
+    
+    
+};
+
