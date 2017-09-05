@@ -8,7 +8,7 @@ element.innerHTML='New value';
 //move image
 
 
-var img=document.getElementById('img');
+var img=document.getElementById('madi');
 img.onclick=function()
 {
     
